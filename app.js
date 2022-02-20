@@ -5,7 +5,7 @@ const cfenv = require('cfenv');
 var app  =  express(); 
 var appEnv = cfenv.getAppEnv();
 var url = process.env.url
-app.set('port', (process.env.PORT || 9981))
+app.set('port', (process.env.PORT || 8080))
 app.use(express.static(__dirname + '/images'))
 
 
@@ -23,7 +23,7 @@ app.get('/mithuntechnologies', function(request, response) {
     //response.send("<h2><center>Welcome to Node JS app</h2>");
     response.write("<h2><center><u>Node JS  Application </u></center></h2>");
 	
-    response.write("<h2><center>Welcome to  Mithun Technologies. Please Contact +91-9980923226 for more information or send an email to devopstrainingblr@gmail.com <center></h2>" );
+    response.write("Welcome to  Mithun Technologies. Please Contact +91-9980923226 for more information or send an email to devopstrainingblr@gmail.com " );
     response.end();
     
   })
